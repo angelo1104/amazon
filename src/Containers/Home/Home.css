@@ -1,0 +1,1 @@
+.primeBanner{    width: 100%;    object-fit: contain;    margin-bottom: -150px;    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));    z-index: -1;}
