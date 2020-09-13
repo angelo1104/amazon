@@ -2,7 +2,7 @@ import React from "react";
 import "./Product.css";
 import {useStateValue} from "../../../StateProvider";
 
-function Product({id,title,image,rating,price}) {
+function Product({uuid,id,title,image,rating,price}) {
     //eslint-disable-next-line
     const [{basket},dispatch] = useStateValue();
 
@@ -11,6 +11,7 @@ function Product({id,title,image,rating,price}) {
         dispatch({
             type:"ADD_TO_BASKET",
             item:{
+                uuid:uuid,
                 id:id,
                 title: title,
                 image: image,
