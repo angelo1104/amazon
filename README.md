@@ -40,7 +40,7 @@ Youtube [clever-programmer](https://www.youtube.com)
 
 [Documentation](https://react.com)
 |
-[Frontend-masters](https://ww.frontend-masters.com)
+[Frontend-masters](https://www.frontend-masters.com)
 
 ##Follow me
 [Facebook](https://www.faceboook.com)
@@ -49,6 +49,6 @@ Youtube [clever-programmer](https://www.youtube.com)
 |
 [Instagram](https://www.instagram.com)
 |
-[Linkedin](https://www.linkedin.com)
+[Linkedin](https://www.linkedin.com/in/angelo-ferrari-7234631b7/)
 |
 [Email-me](mailto:talkingcat1003@gmail.com)
