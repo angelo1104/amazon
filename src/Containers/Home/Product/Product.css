@@ -23,6 +23,11 @@
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;
+    transition: transform 500ms;
+}
+
+.product img:hover{
+    transform: scale(1.1);
 }
 
 .product button {

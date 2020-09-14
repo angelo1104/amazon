@@ -17,7 +17,6 @@ function App() {
   //eslint-disable-next-line
   const [state,dispatch]= useStateValue()
 
-  //eslint-disable-next-line
   useEffect(()=>{
       //will only run once when the component loads
       auth.onAuthStateChanged(authUser=>{
@@ -39,6 +38,7 @@ function App() {
               })
           }
       })
+      // eslint-disable-next-line
   },[])
 
   return (
