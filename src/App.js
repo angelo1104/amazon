@@ -11,6 +11,7 @@ import {
 import Login from "./Containers/Login/Login";
 import {auth} from "./firebase";
 import {useStateValue} from "./StateProvider";
+import Payment from "./Containers/Payment/Payment";
 
 
 function App() {
@@ -53,6 +54,11 @@ function App() {
                     <Route path="/checkout">
                         <Header/>
                         <Checkout/>
+                    </Route>
+
+                    <Route path="/payment">
+                        <Header/>
+                        <Payment/>
                     </Route>
 
                     <Route path="/">
