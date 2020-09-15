@@ -1,12 +1,33 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Payment.css"
 import {useStateValue} from "../../StateProvider";
 import BasketProduct from "../Checkout/BasketProduct/BasketProduct";
 import {Link} from "react-router-dom";
+import {CardElement,useStripe,useElements} from "@stripe/react-stripe-js"
+import CurrencyFormat from "react-currency-format";
 
 function Payment() {
 
+     const [error,setError] = useState(null)
+    const [disabled,setDisabled] = useState(true)
+
+    const stripe = useStripe()
+    const element = useElements()
+
+    //eslint-disable-next-line
     const [{basket, user}, dispatch] = useStateValue()
+
+    const handleSubmit = e=>{
+
+    }
+
+
+    const handleChange = e =>{
+            
+        setDisabled(e.empty)
+        setError(e.error ? e.error.message : "")
+    }
+
 
     return (
         <div className="payment">
@@ -66,6 +87,21 @@ function Payment() {
 
                     <div className="payment-details">
                         {/*Stripe Magic*/}
+                        <form onSubmit={handleSubmit}>
+                            <CardElement onChange={handleChange} />
+
+                            <div className="price-container">
+                                <CurrencyFormat
+                                        renderText={(value) => (
+                                            <h3>Order Total: {value}</h3>
+                                        )}
+                                        decimalScale={2}
+                                        displayType={"text"}
+                                        thousandSeparator={true}
+                                        prefix={"$"}
+                                    />
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

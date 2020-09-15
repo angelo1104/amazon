@@ -7,6 +7,10 @@
     background-color: white;
 }
 
+.payment-details{
+    flex: 0.8;
+}
+
 .payment h1{
     text-align: center;
     background-color: rgb(234,237,237);
